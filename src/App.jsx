@@ -1,14 +1,15 @@
-import { useState } from "react";
-import { Parent } from "./components/Parent";
-
+import React from "react";
+import { CharactersContextProvider } from "./context/characteContext";
+import { Characters } from "./components/Characters";
 function App() {
-  const [user, setUser] = useState({
-    name: "juan",
-    age: 35,
-  });
   return (
-    <div className="app">
-      <Parent userData={user} setUser={setUser} />
+    <div className="container">
+      <h2 className="text-center alert alert-info ">Rick and Morty</h2>
+      <br></br>
+
+      <CharactersContextProvider>
+        <Characters />
+      </CharactersContextProvider>
     </div>
   );
 }
