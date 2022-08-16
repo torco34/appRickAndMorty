@@ -3,7 +3,6 @@ import { CharactersContext } from "../context/characteContext";
 import { Pagination } from "../components/Pagination";
 function Characters() {
   const { characters } = useContext(CharactersContext);
-
   return (
     <div className="row">
       <Pagination />
@@ -22,9 +21,9 @@ function Characters() {
                   {character.name} - {idx}
                 </h5>
                 <p className="card-text">
-                  <b>Status</b>
+                  <b>Status :{character.name}</b>
                   <br />
-                  <b>Status</b>
+                  <b>Status: {character.species}</b>
                 </p>
               </div>
             </div>

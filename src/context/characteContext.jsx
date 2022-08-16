@@ -32,6 +32,13 @@ export const CharactersContextProvider = ({ children }) => {
       case "next":
         setActualPages(actualPages + 1);
         break;
+
+      case "goTo":
+        const number = Number(e.target.value);
+
+        page = ` https://rickandmortyapi.com/api/character?page=${number}`;
+        setActualPages(number);
+        break;
       default:
         return;
     }
