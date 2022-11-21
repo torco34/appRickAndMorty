@@ -15,6 +15,7 @@ export const CharactersContextProvider = ({ children }) => {
     Axios.get("https://rickandmortyapi.com/api/character/").then((response) => {
       if (response.status === 200) {
         const { info, results } = response.data;
+        console.log(results, "este es el console");
         setCharacters(results);
         setTotalResults(info.count);
         setPages(info.pages);

@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
+
 import { CharactersContext } from "../context/characteContext";
+
 import { Pagination } from "../components/Pagination";
 function Characters() {
   const { characters } = useContext(CharactersContext);
